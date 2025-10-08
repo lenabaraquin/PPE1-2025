@@ -12,3 +12,5 @@ Ajout du repertoire `data/` dans le `.gitignore`
 ### Exercice 1
 Difficultés : 
 J'ai du modifier le shebang `#!/usr/bin/bash` en `#!/bin/zsh` pour récupérer le shell de macOS.
+
+Le script `comptes.sh` fonctionne et est commenté.
