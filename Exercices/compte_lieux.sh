@@ -7,4 +7,4 @@ NB_OUTPUT=$3
 
 ANNOTATION_PATH=$ANNOTATION_PATH$YEAR
 cd $ANNOTATION_PATH
-echo $(cat $YEAR\_$MONTH* | grep Location | sed 's/(.*)(\t[^0-9]+$)/(\\2)/g')
+echo $(cat $YEAR\_$MONTH* | grep Location | awk '{FS="\t"; if ($2 ~ /Location.*/) {print $3}}')
