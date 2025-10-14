@@ -22,3 +22,7 @@ echo $COMPT
 echo $(cat * | wc -l)
 ```
 
+### Exercices 2
+
+**script compte_par_lieux.sh**
+Après avoir tanté de faire une fonction pour compter le nombre d'occurences de chaque lieux, j'ai demandé de l'aide à une amie et j'ai pu découvrir l'option `-c` de `uniq` qui permet de compter les occurences des items supprimés.
