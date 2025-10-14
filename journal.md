@@ -22,7 +22,22 @@ echo $COMPT
 echo $(cat * | wc -l)
 ```
 
-### Exercices 2
+### Exercice 2
 
 **script compte_par_lieux.sh**
 Après avoir tanté de faire une fonction pour compter le nombre d'occurences de chaque lieux, j'ai demandé de l'aide à une amie et j'ai pu découvrir l'option `-c` de `uniq` qui permet de compter les occurences des items supprimés.
+
+### Exercice 4
+
+**explication script cours**
+Le premier bloc de code est un bloc conditionnel et vérifie qu'aucun ou plusieur arguments aient été fournis, auquel cas le script affiche une erreur et s'arrête, sinon le reste du script s'execute.
+
+La variable FICHIER_URLS prends la valeur du premier argument passé au script.
+Les variables OK et NOK sont des compteurs qui sont initialisés à zéro.
+
+Le second bloc de code est une boucle while qui itère sur les lignes du fichier dont le chemin est contenu dans la variable FICHIER_URLS.
+Pour chaque itération: 
+ - Si le contenu de la ligne commence par `http://` ou `https://`, le script imprime un message dans la sortie standard pour indiquer que la ligne courante ressemble à une URL valide et incrémente le compteur OK.
+ - Sinon, le script imprime un message dans la sortie standard pour indiquer que la ligne courante ne ressemble pas à une URL valide et incrémente le compteur NOK.
+
+Enfin, le script imprime le nombre de lignes correspondant à des URLs valides et celui des URLs non valides dans la sortie standard.
