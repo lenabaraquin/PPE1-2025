@@ -1,5 +1,11 @@
 #!/bin/sh
 ANNOTATION_PATH="../data/archive-41/ann/"
+if [[ !($1 =~ [0-9]{4}) ]]; then
+  echo "Renseigner l'année en premier argument, doit un entier de quatre chiffres."
+fi
+if [[ !($2 =~ [A-Z][a-z]+) ]]; then
+  echo "Renseigner l'étiquette en second argument, doit être une chaine de caractère commençant par une majuscule."
+fi
 
 YEAR=$1                           #L'année est donnée par le premier argument du script
 TAG=$2                            #L'étiquette est donnée par le second argument du script
