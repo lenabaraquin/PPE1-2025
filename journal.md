@@ -27,6 +27,8 @@ echo $(cat * | wc -l)
 **script compte_par_lieux.sh**
 Après avoir tanté de faire une fonction pour compter le nombre d'occurences de chaque lieux, j'ai demandé de l'aide à une amie et j'ai pu découvrir l'option `-c` de `uniq` qui permet de compter les occurences des items supprimés.
 
+Je n'arrive pas à faire accepter `*` en second parametre, lorsque le script tante de récupérer l'argument, il semble interpréter `$*` et non `*`. Je corrigerai le script plus tard.
+
 ### Exercice 4
 
 **explication script cours**
