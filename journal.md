@@ -43,3 +43,5 @@ Pour chaque itération:
  - Sinon, le script imprime un message dans la sortie standard pour indiquer que la ligne courante ne ressemble pas à une URL valide et incrémente le compteur NOK.
 
 Enfin, le script imprime le nombre de lignes correspondant à des URLs valides et celui des URLs non valides dans la sortie standard.
+
+## Mini Projet
