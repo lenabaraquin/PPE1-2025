@@ -45,3 +45,13 @@ Pour chaque itération:
 Enfin, le script imprime le nombre de lignes correspondant à des URLs valides et celui des URLs non valides dans la sortie standard.
 
 ## Mini Projet
+
+### Exercice 1
+
+Utiliser une boucle while avec `read` permet de lire les lignes une à une, ce que ne permet pas `cat` qui lit tout le fichier d'un coup.
+
+### Exercice 2 
+
+Parmi les urls présentes dans le fichier `./miniprojet/urls/fr.txt`, l'url `xxx` renvoie vers un site dont le certificat n'est pas à jour, `curl` ne peut donc pas récupérer le contenu de cette page;
+l'url `xxx` n'est pas précédée par `https://`, curl ne permettant pas d'omettre ce préfixe comme les navigateurs web usuels, il ne parvient pas à récupérer le contenu de cette page.
+Le préfixe a été ajouté dans le fichier contenant la liste des urls.
