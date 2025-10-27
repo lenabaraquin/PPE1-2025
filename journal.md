@@ -55,3 +55,4 @@ Utiliser une boucle while avec `read` permet de lire les lignes une à une, ce q
 Parmi les urls présentes dans le fichier `./miniprojet/urls/fr.txt`, l'url `xxx` renvoie vers un site dont le certificat n'est pas à jour, `curl` ne peut donc pas récupérer le contenu de cette page;
 l'url `xxx` n'est pas précédée par `https://`, curl ne permettant pas d'omettre ce préfixe comme les navigateurs web usuels, il ne parvient pas à récupérer le contenu de cette page.
 Le préfixe a été ajouté dans le fichier contenant la liste des urls.
+Les dernieres requetes faites à Wikipedia renvoyaient des erreur 429, j'ai donc ajouté la commande `sleep` dans la boucle afin de ne pas faire trop de requetes dans une periode trop courte.

@@ -12,4 +12,5 @@ while read -r line; do
   encodage=$(curl -is ${line} | grep "content-type:" | cut -f 2 -d "=")
   echo -e "${n}\t${line}\t${http_code}\t${encodage}"
   n=$(expr $n + 1)
+  sleep 1 # Pour éviter l'erreur 429
 done <$path
