@@ -8,9 +8,12 @@ fi
 path=$1
 n=0
 while read -r line; do
-  http_code=$(curl -is ${line} | grep "HTTP/2" | cut -f 2 -d " ")
-  encodage=$(curl -is ${line} | grep "content-type:" | cut -f 2 -d "=")
-  echo -e "${n}\t${line}\t${http_code}\t${encodage}"
+  curl -sL -D tmp.headers -o tmp.html ${line}
+  http_code=$(grep "HTTP/2" tmp.headers | cut -f 2 -d " ")
+  encodage=$(grep "charset=" tmp.headers | cut -f 2 -d "=" | tr -d '\r') #Le tr permet de régler un problème de formatage de la sortie (le nombre de mot s'affichait dans la colonne des urls en écrasant le début de la chaine)
+  nb_mots=$(lynx -dump -nolist tmp.html | wc -w)
+  echo -e "${n}\t${line}\t${http_code}\t${encodage}\t${nb_mots}"
   n=$(expr $n + 1)
-  sleep 1 # Pour éviter l'erreur 429
 done <$path
+
+rm tmp.headers tmp.html
